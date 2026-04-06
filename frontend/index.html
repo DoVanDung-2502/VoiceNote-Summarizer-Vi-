@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ứng dụng AI chuyển đổi giọng nói thành văn bản và tóm tắt nội dung tự động">
+    <title>AI Trainscript - Nhận diện & Tóm tắt giọng nói</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 AI Trainscript</h1>
+        <p class="subtitle">Ghi âm → Nhận diện giọng nói → Tóm tắt tự động</p>
+
+        <!-- Pipeline visualization -->
+        <div class="pipeline">
+            <span class="pipeline-step"><span class="step-icon">🎙️</span> Ghi âm</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-step"><span class="step-icon">🔊</span> Whisper AI</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-step"><span class="step-icon">📝</span> Tóm tắt</span>
+        </div>
+
+        <div class="controls">
+            <button id="recordBtn">🎙️ Nhấn để ghi âm</button>
+            <p id="status" class="status-info">Sẵn sàng...</p>
+        </div>
+
+        <div class="result-section">
+            <div class="result-card">
+                <h3><span class="icon">📄</span> Văn bản nhận diện</h3>
+                <div id="transcript" class="box">Kết quả nhận diện giọng nói sẽ hiển thị ở đây...</div>
+            </div>
+
+            <div class="result-card">
+                <h3><span class="icon">📋</span> Tóm tắt ý chính</h3>
+                <div id="summary" class="box">Bản tóm tắt tự động sẽ hiển thị ở đây...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/recorder.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
